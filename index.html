@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nest Student Concierge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <svg class="icon-library" aria-hidden="true">
+    <symbol id="icon-chat" viewBox="0 0 24 24"><path d="M5 5h14v10H9l-4 4V5Zm3 4h8M8 12h5"/></symbol>
+    <symbol id="icon-calendar" viewBox="0 0 24 24"><path d="M5 7h14v12H5V7Zm0 4h14M8 4v5m8-5v5"/></symbol>
+    <symbol id="icon-book" viewBox="0 0 24 24"><path d="M5 5h7a3 3 0 0 1 3 3v11a3 3 0 0 0-3-3H5V5Zm14 0h-4v14"/></symbol>
+    <symbol id="icon-building" viewBox="0 0 24 24"><path d="M4 20h16M6 20V7l6-3 6 3v13M9 10h2m2 0h2m-6 4h2m2 0h2m-4 6v-3h2v3"/></symbol>
+    <symbol id="icon-people" viewBox="0 0 24 24"><path d="M9 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm6 1a2.5 2.5 0 1 0 0-5M4 19v-2a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v2m1-5a4 4 0 0 1 5 4v1"/></symbol>
+    <symbol id="icon-map" viewBox="0 0 24 24"><path d="m4 6 5-2 6 2 5-2v14l-5 2-6-2-5 2V6Zm5-2v14m6-12v14"/></symbol>
+    <symbol id="icon-pass" viewBox="0 0 24 24"><path d="M5 4h14v16H5V4Zm3 4h3v3H8V8Zm5 0h3m-3 3h3m-8 4h8"/></symbol>
+    <symbol id="icon-portal" viewBox="0 0 24 24"><path d="M4 5h16v14H4V5Zm0 4h16M8 7h.01M11 7h.01M8 13h8m-8 3h5"/></symbol>
+  </svg>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="The Nest home"><span class="brand-mark" aria-hidden="true">EAGLE</span><span><strong>THE NEST</strong><small>TOUGALOO COLLEGE</small></span></a>
+    <nav aria-label="Student portal navigation"><a href="/">Dashboard</a><a href="#chat">Ask the Concierge</a><a href="#campus-directory">Office directory</a><a href="#appointments">Appointments</a><a href="#check-in-pass">Check-in pass</a></nav>
+    <div class="profile"><span>Student</span><div class="avatar" aria-hidden="true">ST</div></div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="hero" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">STUDENT SUPPORT · AVAILABLE 24/7</p>
+        <h1 id="page-title">How can we help<br>you today?</h1>
+        <p class="hero-copy">Ask a question or choose an action to get started.</p>
+        <div class="privacy-note"><p><strong>Your privacy matters.</strong> General information only. Private student records are never shown.</p></div>
+      </div>
+      <nav class="action-hub" aria-label="Quick student actions">
+        <a href="#chat"><svg aria-hidden="true"><use href="#icon-chat"></use></svg><span>Ask The Nest</span></a>
+        <a href="#appointments"><svg aria-hidden="true"><use href="#icon-calendar"></use></svg><span>Appointments</span></a>
+        <a href="#retention-staff"><svg aria-hidden="true"><use href="#icon-people"></use></svg><span>Retention Staff</span></a>
+        <a href="#campus-directory"><svg aria-hidden="true"><use href="#icon-building"></use></svg><span>Office Directory</span></a>
+        <a href="/resources/academic-calendar-2026-2027.pdf"><svg aria-hidden="true"><use href="#icon-calendar"></use></svg><span>Academic Calendar</span></a>
+        <a href="#nearby"><svg aria-hidden="true"><use href="#icon-map"></use></svg><span>Near Campus</span></a>
+        <a href="#check-in-pass"><svg aria-hidden="true"><use href="#icon-pass"></use></svg><span>Check-in Pass</span></a>
+        <a href="https://theloo.tougaloo.edu/ics"><svg aria-hidden="true"><use href="#icon-portal"></use></svg><span>The Loo</span></a>
+        <a href="https://tougaloo.instructure.com/"><svg aria-hidden="true"><use href="#icon-book"></use></svg><span>Canvas</span></a>
+        <a href="https://chatgpt.com/g/g-6a2b0f5490ec81918ec01fb0090b4bfc-the-writing-nest-powered-by-justice"><svg aria-hidden="true"><use href="#icon-book"></use></svg><span>Writing Nest</span></a>
+      </nav>
+    </section>
+
+    <section class="workspace" aria-label="Concierge and support">
+      <div class="chat-card" id="chat">
+        <div class="chat-heading">
+          <div class="concierge-avatar" aria-hidden="true">EAGLE</div>
+          <div><h2>Nest Concierge</h2><p><span class="online-dot" aria-hidden="true"></span> Online now</p></div>
+          <button class="text-button" id="new-chat" type="button">New conversation</button>
+        </div>
+        <div class="messages" id="messages" role="log" aria-live="polite" aria-relevant="additions text" aria-label="Conversation with Nest Concierge" tabindex="0">
+          <article class="message assistant"><div class="bubble"><p>Welcome to The Nest. I can help you find general information and connect you with the right office. What can I help with?</p></div></article>
+        </div>
+        <div class="suggestions" id="suggestions" aria-label="Suggested questions">
+          <button type="button">How do I schedule tutoring?</button>
+          <button type="button">When does registration open?</button>
+          <button type="button">Who can help with FAFSA?</button>
+        </div>
+        <form class="composer" id="chat-form">
+          <label class="sr-only" for="question">Ask the Nest Concierge</label>
+          <textarea id="question" maxlength="1000" rows="2" placeholder="Ask a question about Tougaloo resources..." aria-describedby="chat-help" required></textarea>
+          <button type="submit">Send</button>
+          <small id="chat-help">General information only. For emergencies, call 911.</small>
+        </form>
+      </div>
+
+      <aside class="side-column" aria-label="Support options">
+        <section class="support-card" id="support" aria-labelledby="support-title">
+          <p class="eyebrow">NEED A PERSON?</p>
+          <h2 id="support-title">Contact support</h2>
+          <p>Connect with Student Retention Services for general student-success support.</p>
+          <div class="support-actions">
+            <button type="button" class="teams-button" data-contact-method="teams">Message us in Teams</button>
+            <button type="button" data-contact-method="email">Email Student Retention</button>
+            <button type="button" data-contact-method="follow_up">Request follow-up</button>
+            <button type="button" data-contact-method="office_hours">View office hours</button>
+          </div>
+          <dl class="office-details">
+            <div><dt>Location</dt><dd id="support-location">Galloway Hall, rooms 226 and 230</dd></div>
+            <div><dt>Hours</dt><dd id="support-hours">Monday-Friday, 8:00 a.m.-5:00 p.m.</dd></div>
+          </dl>
+          <p class="emergency-disclaimer"><strong>Urgent concern?</strong> Call 911 for an emergency or call or text 988 for urgent mental health support.</p>
+        </section>
+        <section class="topics-card" aria-labelledby="topics-title">
+          <h2 id="topics-title">Popular topics</h2>
+          <button type="button" data-question="What offices help with academic support?"><span aria-hidden="true">01</span> Academic support</button>
+          <button type="button" data-question="How do I appeal SAP?"><span aria-hidden="true">02</span> SAP and academic standing</button>
+          <button type="button" data-question="Where can I find housing information?"><span aria-hidden="true">03</span> Housing and move-in</button>
+        </section>
+      </aside>
+    </section>
+
+    <section class="staff-section" id="retention-staff" aria-labelledby="retention-staff-title">
+      <div class="section-heading">
+        <p class="eyebrow">MEET STUDENT RETENTION SERVICES</p>
+        <h2 id="retention-staff-title">People ready to help</h2>
+        <p>Contact a Retention staff member or request an appointment through The Nest.</p>
+      </div>
+      <div class="staff-grid">
+        <article class="staff-card">
+          <img src="/resources/staff/shelbie-jamison.jpeg" alt="Portrait of Dr. Shelbie Jamison, Director of Student Retention">
+          <div class="staff-card-content">
+            <p class="staff-role">Director of Student Retention</p>
+            <h3>Dr. Shelbie Jamison</h3>
+            <p>Leads initiatives supporting student success, persistence, graduation, academic achievement, and holistic development.</p>
+            <dl><div><dt>Office</dt><dd>Galloway Hall 230</dd></div><div><dt>Hours</dt><dd>Monday-Friday, 8:00 a.m.-5:00 p.m.</dd></div></dl>
+            <div class="staff-actions"><a href="mailto:sgjamison@tougaloo.edu">Email Dr. Jamison</a><a href="tel:+16019777942">Call 601-977-7942</a><button type="button" data-appointment-provider="shelbie-jamison">Request appointment</button></div>
+          </div>
+        </article>
+        <article class="staff-card">
+          <img src="/resources/staff/ericia-strothers.jpeg" alt="Portrait of Ericia Strothers, Student Retention Coach">
+          <div class="staff-card-content">
+            <p class="staff-role">Student Retention Coach</p>
+            <h3>Ericia Strothers</h3>
+            <p>Provides personalized support, resources, and encouragement to help students stay on track and achieve their academic goals.</p>
+            <dl><div><dt>Office</dt><dd>Galloway Hall 226</dd></div><div><dt>Hours</dt><dd>Monday-Friday, 8:00 a.m.-5:00 p.m.</dd></div></dl>
+            <div class="staff-actions"><a href="mailto:estrothersl@tougaloo.edu">Email Ericia Strothers</a><a href="tel:+16019774484">Call 601-977-4484</a><button type="button" data-appointment-provider="ericia-strothers">Request appointment</button></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="directory-section" id="campus-directory" aria-labelledby="campus-directory-title">
+      <div class="section-heading">
+        <p class="eyebrow">CAMPUS CONTACTS</p>
+        <h2 id="campus-directory-title">Office directory</h2>
+        <p>This starter directory is not yet a complete list of Tougaloo College offices. Additional offices, locations, and contacts can be added as they are approved.</p>
+      </div>
+      <div class="directory-grid" id="directory-grid" aria-live="polite" aria-busy="true">
+        <p class="empty-state">Loading approved office contacts...</p>
+      </div>
+    </section>
+
+    <section class="nearby-section" id="nearby" aria-labelledby="nearby-title">
+      <div class="nearby-heading">
+        <div><p class="eyebrow">EXPLORE NEAR CAMPUS</p><h2 id="nearby-title">What’s nearby?</h2><p>Find useful places within a selected radius of Tougaloo College. Your personal location is never requested.</p></div>
+        <form id="places-form" class="places-form">
+          <label>Category<select id="places-category"><option value="clinics">Health clinics</option><option value="groceries">Grocery stores</option><option value="restaurants">Restaurants</option><option value="activities">Fun activities</option><option value="shopping">Shopping</option></select></label>
+          <label>Radius<select id="places-radius"><option value="3">3 miles</option><option value="5" selected>5 miles</option><option value="10">10 miles</option><option value="15">15 miles</option><option value="25">25 miles</option></select></label>
+          <button class="primary-button" type="submit">Find places</button>
+        </form>
+      </div>
+      <div id="places-results" class="places-results" aria-live="polite" aria-busy="false"><p class="empty-state">Choose a category and radius to explore places near campus.</p></div>
+      <p class="places-disclaimer">Listings come from an external maps provider and may change. For emergencies call 911. The Concierge does not provide medical advice or endorse businesses.</p>
+    </section>
+
+    <section class="appointment-section" id="appointments" aria-labelledby="appointment-title">
+      <div>
+        <p class="eyebrow">STUDENT SUCCESS APPOINTMENTS</p>
+        <h2 id="appointment-title">Schedule support</h2>
+        <p>Request time with Student Retention Services or submit a tutoring request. Eagle Assistants have not yet been assigned to the listed subjects.</p>
+      </div>
+      <form id="appointment-form" class="appointment-form">
+        <label>Support type<select id="appointment-type"><option value="retention">Student Retention Services</option><option value="eagle-assistant">Eagle Assistant Tutoring</option></select></label>
+        <label>Provider<select id="appointment-provider"><option value="shelbie-jamison">Dr. Shelbie Jamison</option><option value="ericia-strothers">Ericia Strothers</option></select></label>
+        <label id="appointment-reason-label">Reason for appointment<select id="appointment-reason" required></select></label>
+        <label id="appointment-subject-label" hidden>Tutoring subject<select id="appointment-subject"></select></label>
+        <label>Date and time<input id="appointment-time" type="datetime-local" required></label>
+        <label>Meeting format<select id="appointment-format"><option value="in_person">In person</option><option value="microsoft_teams">Microsoft Teams</option></select></label>
+        <button class="primary-button" type="submit">Request appointment</button>
+        <p class="appointment-note">Choose a general reason only. Do not enter grades, balances, SAP status, disability information, conduct records, financial-aid details, or other private information.</p>
+      </form>
+    </section>
+    <section class="checkin-pass-section" id="check-in-pass" aria-labelledby="checkin-pass-title">
+      <div>
+        <p class="eyebrow">EVENT AND TUTORIAL CHECK-IN</p>
+        <h2 id="checkin-pass-title">My check-in pass</h2>
+        <p>Create a provisional Nest profile and generate a five-minute secure check-in code for Student Retention events and tutorial centers.</p>
+        <p class="checkin-privacy"><strong>Privacy:</strong> The check-in code contains no name, email, student ID, grades, or academic information.</p>
+      </div>
+      <div class="checkin-profile">
+        <form id="profile-form" class="profile-form">
+          <h3>Create provisional profile</h3>
+          <label>Name<input id="profile-name" autocomplete="name" required></label>
+          <label>Tougaloo email<input id="profile-email" type="email" autocomplete="email" pattern="[^@\s]+@tougaloo\.edu" required></label>
+          <label class="profile-acknowledgment"><input type="checkbox" required> I understand this provisional profile will be used to record my attendance at Student Retention events and tutorial centers.</label>
+          <button class="primary-button" type="submit">Create profile</button>
+        </form>
+        <div id="checkin-pass-result" class="checkin-pass-result" aria-live="polite">
+          <p>Create your profile to generate a check-in pass.</p>
+        </div>
+        <section id="my-attendance" class="my-attendance" aria-labelledby="my-attendance-title" hidden>
+          <h3 id="my-attendance-title">My attendance</h3>
+          <div id="my-attendance-list" aria-live="polite"></div>
+        </section>
+      </div>
+    </section>
+  </main>
+  <footer><span>© Tougaloo College</span><span>Concierge answers from approved sources</span></footer>
+  <nav class="mobile-nav" aria-label="Mobile student navigation">
+    <a href="#chat"><svg aria-hidden="true"><use href="#icon-chat"></use></svg><span>Ask</span></a>
+    <a href="#appointments"><svg aria-hidden="true"><use href="#icon-calendar"></use></svg><span>Schedule</span></a>
+    <a href="#campus-directory"><svg aria-hidden="true"><use href="#icon-building"></use></svg><span>Offices</span></a>
+    <a href="#check-in-pass"><svg aria-hidden="true"><use href="#icon-pass"></use></svg><span>Pass</span></a>
+  </nav>
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  <script src="/app.js"></script>
+</body>
+</html>

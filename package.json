@@ -1,0 +1,13 @@
+{
+  "name": "nest-student-concierge-agent",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Phase 1 virtual front desk for Tougaloo College students inside The Nest.",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node test/concierge.test.js && node test/api.test.js && node test/places.test.js && node test/appointments.test.js && node test/checkin.test.js && node test/roles.test.js && node test/accessibility.test.js && node test/persistence.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

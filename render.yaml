@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: nest-student-concierge-demo
+    env: node
+    plan: free
+    buildCommand: ""
+    startCommand: npm start
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NEST_PUBLIC_DEMO
+        value: "true"
+      - key: NEST_EPHEMERAL
+        value: "true"

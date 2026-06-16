@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Concierge Knowledge Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#admin-content">Skip to main content</a>
+  <header class="topbar"><a class="brand" href="/"><span class="brand-mark" aria-label="Academic Eagle">EAGLE</span><span><strong>THE NEST</strong><small>CONCIERGE ADMIN</small></span></a><div class="profile"><span>Content editor</span><div class="avatar">CE</div></div></header>
+  <main class="admin-main" id="admin-content" tabindex="-1">
+    <div class="admin-header"><div><p class="eyebrow">APPROVED CONTENT ONLY</p><h1>Knowledge manager</h1></div><a href="/" class="primary-button">View student chat</a></div>
+    <div class="admin-grid">
+      <section class="panel"><h2>Knowledge articles</h2><div class="article-list" id="article-list"></div></section>
+      <section class="panel">
+        <h2>Add or edit an article</h2>
+        <form class="editor" id="editor">
+          <input type="hidden" name="id">
+          <div class="form-row"><label>Title<input name="title" required></label><label>Category<input name="category" required></label></div>
+          <label>Summary<input name="summary"></label>
+          <label>Approved answer content<textarea name="content" required></textarea></label>
+          <div class="form-row"><label>Source URL<input name="sourceUrl" required></label><label>Status<select name="status"><option value="draft">Draft</option><option value="published">Published</option></select></label></div>
+          <div class="form-row"><label>Responsible office<input name="office" required></label><label>Contact URL<input name="contactUrl" required></label></div>
+          <button class="primary-button" type="submit">Save article</button>
+        </form>
+      </section>
+    </div>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  <script src="/admin.js"></script>
+</body>
+</html>

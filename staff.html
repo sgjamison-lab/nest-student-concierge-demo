@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Retention Staff Dashboard</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#staff-content">Skip to main content</a>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">EAGLE</span><span><strong>THE NEST</strong><small>RETENTION STAFF</small></span></a>
+    <nav aria-label="Staff navigation"><a href="#appointments">Appointments</a><a href="#follow-ups">Follow-ups</a><a href="#check-in">Check-in</a><a href="#attendance">Attendance</a></nav>
+    <div class="profile"><span>Staff workspace</span><div class="avatar" aria-hidden="true">RS</div></div>
+  </header>
+  <main class="staff-dashboard" id="staff-content" tabindex="-1">
+    <div class="staff-dashboard-heading"><div><p class="eyebrow">STUDENT RETENTION SERVICES</p><h1>Staff dashboard</h1><p>Manage general support requests, appointments, sessions, and attendance.</p></div><a class="secondary-link" href="/">View student experience</a></div>
+    <section class="metric-grid" aria-label="Staff dashboard summary">
+      <article><strong id="metric-appointments">0</strong><span>Appointment requests</span></article>
+      <article><strong id="metric-follow-ups">0</strong><span>Open follow-ups</span></article>
+      <article><strong id="metric-sessions">0</strong><span>Open sessions</span></article>
+      <article><strong id="metric-checkins">0</strong><span>Total check-ins</span></article>
+    </section>
+    <div class="staff-dashboard-grid">
+      <section class="panel staff-panel" id="appointments"><div class="panel-heading"><div><p class="eyebrow">SCHEDULING</p><h2>Appointments</h2></div></div><div id="staff-appointments" class="staff-list" aria-live="polite"></div></section>
+      <section class="panel staff-panel" id="follow-ups"><div class="panel-heading"><div><p class="eyebrow">CONCIERGE ESCALATIONS</p><h2>Follow-up requests</h2></div></div><div id="staff-follow-ups" class="staff-list" aria-live="polite"></div></section>
+      <section class="panel staff-panel" id="check-in">
+        <div class="panel-heading"><div><p class="eyebrow">EVENTS AND TUTORING</p><h2>Check-in</h2></div></div>
+        <div class="staff-forms">
+          <form id="event-form" class="editor"><h3>Open a session</h3><label>Session name<input name="name" required></label><label>Location<input name="location" required></label><label>Type<select name="eventType"><option value="tutorial_center">Tutorial center</option><option value="event">Event</option></select></label><button class="primary-button" type="submit">Open session</button></form>
+          <form id="scan-form" class="editor"><h3>Check in a student</h3><label>Open session<select id="scan-event" required></select></label><label>Six-digit code<input id="scan-code" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" autocomplete="off" required></label><button class="primary-button" type="submit">Check student in</button></form>
+        </div>
+        <div id="staff-events" class="staff-list" aria-live="polite"></div>
+      </section>
+      <section class="panel staff-panel" id="attendance"><div class="panel-heading"><div><p class="eyebrow">RECENT ACTIVITY</p><h2>Attendance</h2></div></div><div id="staff-attendance" class="staff-list" aria-live="polite"></div></section>
+    </div>
+    <p class="staff-privacy"><strong>Privacy reminder:</strong> Use this workspace only for authorized Retention operations. Do not enter private student records into appointment or follow-up notes.</p>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  <script src="/staff.js"></script>
+</body>
+</html>

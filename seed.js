@@ -1,0 +1,172 @@
+const seedArticles = [
+  {
+    id: "kb-tutoring",
+    title: "Schedule Tutoring and PAL Support",
+    category: "Tutoring",
+    summary: "How students schedule tutoring and find PAL support.",
+    content: "Tutoring is planned for World Biology, Biology I, Biology II, French I, French II, Secret of Life, Elementary Algebra, College Algebra, Trigonometry, and Contemporary Math. Eagle Assistants have not yet been assigned to these subjects. Students may submit a tutoring request, and Student Retention Services will follow up when an Eagle Assistant is available.",
+    sourceUrl: "/nest/learning-support/schedule-tutoring",
+    office: "Student Retention Services",
+    contactUrl: "mailto:retaintheloo@tougaloo.edu",
+    status: "published",
+    updatedAt: "2026-06-01"
+  },
+  {
+    id: "kb-retention-staff",
+    title: "Student Retention Services Staff Directory",
+    category: "Student Success",
+    summary: "Contact information, office locations, and hours for Student Retention Services staff.",
+    content: "Student Retention Services is located in Galloway Hall. Dr. Shelbie Jamison, Director of Student Retention, is in Galloway Hall 230 and can be reached at sgjamison@tougaloo.edu or 601-977-7942. Ericia Strothers, Student Retention Coach, is in Galloway Hall 226 and can be reached at estrothersl@tougaloo.edu or 601-977-4484. Office hours are Monday-Friday, 8:00 a.m.-5:00 p.m.",
+    sourceUrl: "/#retention-staff",
+    office: "Student Retention Services",
+    contactUrl: "mailto:sgjamison@tougaloo.edu",
+    status: "published",
+    updatedAt: "2026-06-15"
+  },
+  {
+    id: "kb-campus-office-directory",
+    title: "Tougaloo College Office Directory",
+    category: "Campus Resources",
+    summary: "Starter contact directory for Tougaloo College offices and departments.",
+    content: "This is a starter directory and is not yet a complete list of Tougaloo College offices. Division of Enrollment Management & Student Services: 601-977-7814. Division of Academic Affairs: 601-977-7937. Financial Aid: 601-977-6134. Bursar: 601-977-7725. Office of Records (Registrar): 601-977-6135. Office of Student Engagement: 601-977-6186. Student Retention Services: 601-977-4484 or retaintheloo@tougaloo.edu. Information Technology (IT) Help Desk: helpdesk@tougaloo.edu.",
+    sourceUrl: "/#campus-directory",
+    office: "Tougaloo College",
+    contactUrl: "/#campus-directory",
+    status: "published",
+    updatedAt: "2026-06-15"
+  },
+  {
+    id: "kb-calendar",
+    title: "Official Academic Calendar 2026-2027",
+    category: "Academic Calendar",
+    summary: "Official Fall 2026, Spring 2027, and Summer 2027 registration, add/drop, withdrawal, midterm, final exam, and semester dates.",
+    content: "Key 2026-2027 dates: Fall 2026 classes begin August 10; drop/add and late registration run August 10-21; course withdrawal begins August 24; midterms are September 21-22; the last day to receive a W and withdraw from the College is October 16; final exams are November 20-21 and 23-24. Spring 2027 classes begin January 11; drop/add and late registration run January 11-22; course withdrawal begins January 25; midterms are March 2-3; the last day to receive a W and withdraw from the College is March 19; final exams are April 27-30. Summer 2027 registration is June 1-4; classes begin June 7; drop/add and late registration run June 8-9; course withdrawal begins June 10; the last day to receive a W and withdraw from the College is June 25; final exams are July 20-21. Confirm the applicable term in the official calendar and contact the Registrar before acting on a deadline.",
+    sourceUrl: "/resources/academic-calendar-2026-2027.pdf",
+    office: "Office of the Registrar",
+    contactUrl: "mailto:registrar@tougaloo.edu",
+    status: "published",
+    updatedAt: "2026-06-12"
+  },
+  {
+    id: "kb-registration",
+    title: "Registration General FAQ",
+    category: "Registration",
+    summary: "General registration steps and common holds.",
+    content: "Registration dates are listed on the Academic Calendar. Before registering, review your program requirements, meet with your advisor when required, and check The Nest for holds. The Concierge cannot view or remove individual holds. Contact the Registrar for registration support.",
+    sourceUrl: "/nest/academics/registration",
+    office: "Office of the Registrar",
+    contactUrl: "mailto:registrar@tougaloo.edu",
+    status: "published",
+    updatedAt: "2026-05-20"
+  },
+  {
+    id: "kb-degree-requirements",
+    title: "Degree Requirements for Graduation",
+    category: "Academic Policy",
+    summary: "Official Tougaloo College catalog page for degree requirements for graduation.",
+    content: "Review the official Tougaloo College catalog page for Degree Requirements for Graduation. For questions about your individual degree audit, completed requirements, or graduation eligibility, contact the Office of the Registrar through a secure channel. The Concierge cannot determine whether an individual student has met graduation requirements.",
+    sourceUrl: "https://catalog.tougaloo.edu/content.php?catoid=2&navoid=85",
+    office: "Office of the Registrar",
+    contactUrl: "mailto:registrar@tougaloo.edu",
+    status: "published",
+    updatedAt: "2026-06-12"
+  },
+  {
+    id: "kb-sap",
+    title: "Academic Standing and SAP General Guidance",
+    category: "Student Success",
+    summary: "General guidance for academic warning and SAP appeals.",
+    content: "Academic warning is a signal to connect early with your advisor and Student Retention Services to build a success plan. SAP appeals are handled through Financial Aid and generally require the official appeal form and supporting documentation. The Concierge cannot view your academic standing, SAP status, or appeal decision.",
+    sourceUrl: "/nest/student-success/academic-standing-and-sap",
+    office: "Student Retention Services",
+    contactUrl: "mailto:retaintheloo@tougaloo.edu",
+    status: "published",
+    updatedAt: "2026-05-28"
+  },
+  {
+    id: "kb-financial-aid",
+    title: "Financial Aid and FAFSA General FAQ",
+    category: "Financial Aid",
+    summary: "General FAFSA and financial aid help.",
+    content: "Complete and manage the FAFSA through the official Federal Student Aid website at StudentAid.gov. For Tougaloo deadlines, missing documents, eligibility, awards, or account-specific questions, contact the Office of Financial Aid through a secure channel. The Concierge cannot view financial aid records or balances.",
+    sourceUrl: "https://studentaid.gov/",
+    office: "Office of Financial Aid",
+    contactUrl: "mailto:financialaid@tougaloo.edu",
+    status: "published",
+    updatedAt: "2026-06-02"
+  },
+  {
+    id: "kb-password",
+    title: "Reset Your Tougaloo Email Password",
+    category: "Technology",
+    summary: "Email password reset help.",
+    content: "Use the password reset link on The Nest sign-in page. If self-service reset does not work, contact the IT Help Desk. Never share your password or verification code with anyone, including the Concierge.",
+    sourceUrl: "/nest/help/email-password-reset",
+    office: "IT Help Desk",
+    contactUrl: "mailto:helpdesk@tougaloo.edu",
+    status: "published",
+    updatedAt: "2026-04-15"
+  },
+  {
+    id: "kb-canvas",
+    title: "Tougaloo College Canvas",
+    category: "Technology",
+    summary: "Official Canvas link only.",
+    content: "Open Tougaloo College Canvas at tougaloo.instructure.com.",
+    sourceUrl: "https://tougaloo.instructure.com/",
+    office: "Tougaloo College Canvas",
+    contactUrl: "https://tougaloo.instructure.com/",
+    status: "published",
+    updatedAt: "2026-06-12"
+  },
+  {
+    id: "kb-writing-nest",
+    title: "The Writing Nest, powered by Justice",
+    category: "Academic Support",
+    summary: "Approved external link to The Writing Nest writing-support assistant.",
+    content: "Open The Writing Nest, powered by Justice, for writing support. This link opens an external ChatGPT service. Do not enter grades, private student records, disability information, conduct records, financial-aid details, or other sensitive information.",
+    sourceUrl: "https://chatgpt.com/g/g-6a2b0f5490ec81918ec01fb0090b4bfc-the-writing-nest-powered-by-justice",
+    office: "The Writing Nest",
+    contactUrl: "https://chatgpt.com/g/g-6a2b0f5490ec81918ec01fb0090b4bfc-the-writing-nest-powered-by-justice",
+    status: "published",
+    updatedAt: "2026-06-12"
+  },
+  {
+    id: "kb-the-loo",
+    title: "The Loo Student Portal",
+    category: "Student Portal",
+    summary: "Official The Loo student portal link only.",
+    content: "Open The Loo student portal at theloo.tougaloo.edu/ics.",
+    sourceUrl: "https://theloo.tougaloo.edu/ics",
+    office: "The Loo Student Portal",
+    contactUrl: "https://theloo.tougaloo.edu/ics",
+    status: "published",
+    updatedAt: "2026-06-12"
+  },
+  {
+    id: "kb-urgent-care",
+    title: "Health and Emergency Resources",
+    category: "Campus Resources",
+    summary: "Navigation to urgent and emergency care resources.",
+    content: "For a life-threatening emergency, call 911. For non-emergency health support and current nearby urgent-care options, open the Health Resources directory in The Nest or contact Campus Health Services. The Concierge does not provide medical advice.",
+    sourceUrl: "/nest/resources/health-and-emergency",
+    office: "Campus Health Services",
+    contactUrl: "mailto:healthservices@tougaloo.edu",
+    status: "published",
+    updatedAt: "2026-06-04"
+  },
+  {
+    id: "kb-housing",
+    title: "Housing and Move-In General FAQ",
+    category: "Housing",
+    summary: "General housing and move-in information.",
+    content: "Housing announcements, move-in windows, packing guidance, and residence-hall contacts are published in The Nest Housing Hub. For room assignments, charges, accommodations, or individual housing concerns, contact Residence Life through a secure channel.",
+    sourceUrl: "/nest/housing",
+    office: "Residence Life",
+    contactUrl: "mailto:residencelife@tougaloo.edu",
+    status: "published",
+    updatedAt: "2026-06-03"
+  }
+];
+
+module.exports = { seedArticles };
